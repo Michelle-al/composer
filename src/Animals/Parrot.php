@@ -12,4 +12,8 @@ class Parrot extends Animal
     protected function getNoise(): string{
         return 'The ' . $this->getName() . ' says "coco"';
     }
+    public function __toString(): string
+    {
+        return $this->noise();
+    }
 }

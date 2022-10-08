@@ -6,10 +6,14 @@ use App\Animal;
 class Zebra extends Animal
 {
     public function __construct($name){
-        $this->name = $name;
+        parent::__construct($name);
     }
 
     protected function getNoise(): string{
         return 'The ' . $this->getName() . ' says "hiiiii"';
+    }
+    public function __toString(): string
+    {
+        return $this->noise();
     }
 }

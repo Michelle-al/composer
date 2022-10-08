@@ -12,4 +12,8 @@ class Whale extends Animal
     protected function getNoise(): string{
         return 'The ' . $this->getName() . ' says "splash"';
     }
+    public function __toString(): string
+    {
+        return $this->noise();
+    }
 }

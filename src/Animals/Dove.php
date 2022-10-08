@@ -12,4 +12,8 @@ class Dove extends Animal
     protected function getNoise(): string{
         return 'The ' . $this->getName() . ' says "Rou Rouuu"';
     }
+    public function __toString(): string
+    {
+        return $this->noise();
+    }
 }
